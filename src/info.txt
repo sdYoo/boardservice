@@ -1,0 +1,5 @@
+* MariaDB 연동 참고
+https://4urdev.tistory.com/46
+
+* Spring boot + gradle 개발 참고
+https://jojoldu.tistory.com/250?category=635883
