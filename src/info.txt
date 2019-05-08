@@ -3,3 +3,23 @@ https://4urdev.tistory.com/46
 
 * Spring boot + gradle 개발 참고
 https://jojoldu.tistory.com/250?category=635883
+
+* application.yml 설정 backup - 2019.05.08
+spring:
+    datasource:
+        platform: mariadb
+        driverClassName: org.mariadb.jdbc.Driver
+        # Fixed in v1.3.3. Doesn't work with mariadb-connector-j v1.3.2 (CONJ-227)
+        url: jdbc:mariadb://52.78.243.240:3306/board_db?autoReconnect=true
+        # If some of the hosts is down, app won't launch. v1.3.3
+        #url: jdbc:mariadb:failover://192.168.33.11:3306,192.168.33.12:3306,192.168.33.13:3306/test?autoReconnect=true
+        # Works with mariadb-connector-j v1.3.2
+        #url: jdbc:mysql:failover://192.168.33.11:3306/test
+        username: root
+        password: tkdejr84
+
+        timeBetweenEvictionRunsMillis: 1000
+        testWhileIdle: true
+        validationQuery: SELECT 1
+    jpa:
+        ddl-auto: ''
