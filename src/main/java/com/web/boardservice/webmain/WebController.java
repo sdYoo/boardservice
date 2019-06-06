@@ -1,4 +1,4 @@
-package com.web;
+package com.web.boardservice.webmain;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
