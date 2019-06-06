@@ -1,11 +1,26 @@
+buildscript {
+    ext {
+        springBootVersion = '2.1.4.RELEASE'
+        //springBootVersion = '1.5.10.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath "io.spring.gradle:dependency-management-plugin:1.0.4.RELEASE"
+    }
+}
+
 plugins {
     id 'org.springframework.boot' version '2.1.4.RELEASE'
+    //id 'org.springframework.boot' version '1.5.10.RELEASE'
     id 'java'
 }
 
 apply plugin: 'io.spring.dependency-management'
 
-group = 'com.web'
+group = 'com.webtest'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
@@ -21,11 +36,15 @@ repositories {
 
 ext {
     set('springCloudVersion', 'Greenwich.SR1')
+    set('hibernateVersion', '5.2.11.Final')
 }
+
+//Spring Boot Overriding
+//ext['hibernate.version'] = '5.2.11.Final'
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-webtest'
     implementation 'org.mariadb.jdbc:mariadb-java-client:2.1.2'
 
     compileOnly 'org.projectlombok:lombok'
@@ -36,6 +55,10 @@ dependencies {
 
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    
+    // view - Handlebars
+    compile 'pl.allegro.tech.boot:handlebars-spring-boot-starter:0.3.0'
+    //compile 'pl.allegro.tech.boot:handlebars-spring-boot-starter:0.2.15'
 }
 
 dependencyManagement {
