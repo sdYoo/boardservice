@@ -1,7 +1,6 @@
 buildscript {
     ext {
         springBootVersion = '2.1.4.RELEASE'
-        //springBootVersion = '1.5.10.RELEASE'
     }
     repositories {
         mavenCentral()
@@ -13,8 +12,6 @@ buildscript {
 }
 
 plugins {
-    id 'org.springframework.boot' version '2.1.4.RELEASE'
-    //id 'org.springframework.boot' version '1.5.10.RELEASE'
     id 'java'
 }
 
@@ -38,9 +35,6 @@ ext {
     set('springCloudVersion', 'Greenwich.SR1')
     set('hibernateVersion', '5.2.11.Final')
 }
-
-//Spring Boot Overriding
-//ext['hibernate.version'] = '5.2.11.Final'
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
