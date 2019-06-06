@@ -10,6 +10,7 @@ public class WebController {
 
     @GetMapping("/")
     public String main() {
+        System.out.println("web main controller!");
         return "main";
     }
 }
