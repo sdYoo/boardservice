@@ -1,15 +1,6 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-      java: openjdk8
-    commands:
-      - echo Entering install phase...
-      - echo Nothing to do now
-  pre_build:
-    commands:
-      - echo Nothing to do in the pre_build phase...
   build:
     commands:
       - echo Build Starting on `date`
