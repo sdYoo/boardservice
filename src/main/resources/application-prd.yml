@@ -1,0 +1,27 @@
+spring:
+  profiles:
+    active: prd
+
+# 운영 환경
+---
+spring:
+  profiles: prd
+server:
+  port: 3306
+  datasource:
+      platform: mariadb
+      driverClassName: org.mariadb.jdbc.Driver
+      # Fixed in v1.3.3. Doesn't work with mariadb-connector-j v1.3.2 (CONJ-227)
+      url: jdbc:mariadb://52.78.243.240:3306/board_db?autoReconnect=true
+      # If some of the hosts is down, app won't launch. v1.3.3
+      #url: jdbc:mariadb:failover://192.168.33.11:3306,192.168.33.12:3306,192.168.33.13:3306/test?autoReconnect=true
+      # Works with mariadb-connector-j v1.3.2
+      #url: jdbc:mysql:failover://192.168.33.11:3306/test
+      username: root
+      password: tkdejr84
+
+      timeBetweenEvictionRunsMillis: 1000
+      testWhileIdle: true
+      validationQuery: SELECT 1
+  jpa:
+      ddl-auto: ''
