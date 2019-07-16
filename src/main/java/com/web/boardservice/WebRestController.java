@@ -1,6 +1,5 @@
 package com.web.boardservice;
 
-
 import com.dto.PostsSaveRequestDto;
 import com.web.boardservice.domain.posts.PostsRepository;
 import com.web.boardservice.service.PostsService;
@@ -24,7 +23,7 @@ public class WebRestController {
 
     @GetMapping("/hello")
     public String hello() {
-
+        System.out.println("hello!");
         return "HelloWorld";
     }
 
@@ -34,5 +33,11 @@ public class WebRestController {
         //postsRepository.save(dto.toEntity());
         System.out.println("savePosts!");
         return postsService.save(dto);
+    }
+
+    @GetMapping("/getTest")
+    public String geoTest() {
+        System.out.println("geoTest!");
+        return "geoTest!";
     }
 }
