@@ -23,3 +23,15 @@ spring:
         validationQuery: SELECT 1
     jpa:
         ddl-auto: ''
+        
+* 서버 실행
+nohup java -jar /opt/app/build/boardservice-0.0.1-SNAPSHOT.jar
+
+* DB 접속
+mysql -p
+
+* 화면개발(react)
+https://ndb796.tistory.com/211?category=1030599
+
+* React + SpringBoot 연동 Sample
+https://www.springboottutorial.com/spring-boot-react-full-stack-crud-maven-application
