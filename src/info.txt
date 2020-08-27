@@ -44,3 +44,11 @@ git stash
 git pullßßß
 
 http://vezi95.blogspot.com/2016/05/git-pull.html
+
+* git 충동 시
+
+git fetch --all
+git reset --hard origin/master
+
+* git 내역조회
+git log
