@@ -35,3 +35,12 @@ https://ndb796.tistory.com/211?category=1030599
 
 * React + SpringBoot 연동 Sample
 https://www.springboottutorial.com/spring-boot-react-full-stack-crud-maven-application
+
+
+* git untracked 관련 에러 발생 시
+
+git add -A
+git stash
+git pullßßß
+
+http://vezi95.blogspot.com/2016/05/git-pull.html
